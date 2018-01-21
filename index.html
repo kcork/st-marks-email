@@ -138,6 +138,10 @@
             background: #555555 !important;
             border-color: #555555 !important;
         }
+        /* What it does: Adds vertical divider on desktop */
+            .vdivider {
+                border-right: 1px solid #f2f2f3;
+            }
 
         /* Media Queries */
         @media screen and (max-width: 600px) {
@@ -184,6 +188,11 @@
             .email-container p {
                 font-size: 17px !important;
             }
+
+            /* What it does: Removes vertical divider on mobile */
+            .vdivider {
+                border-right: 0px solid #f2f2f3;
+            }
         }
 
     </style>
@@ -218,8 +227,6 @@
                     <span style="margin: 0; font-family: 'Source Sans Pro', sans-serif; font-size: 14px; line-height: 125%; color: #ffffff; font-weight: normal;">
 <a href="https://litmus.com" target="_blank" style="background-color:#ffffff; font-size: 13px; font-family: Helvetica, Arial, sans-serif; color: #912235; text-decoration: none; text-transform: uppercase; border-radius: 4px; padding: 10px 18px; border: 0px none #ffffff; display: inline-block;">Give Now</a>
 <a href="https://litmus.com" target="_blank" style="background-color:#f2f2f3; display: inline-block;"><img src="images/social_fb.png" width="30" height="30" alt="Facebook" border="0" class="fluid" style="height: auto; font-family: 'Source Sans Pro', sans-serif; font-size: 15px; line-height: 140%; color: #515457;"></a>
-<!-- <a href="#"><img src="images/social_fb.png" width="41" height="36" alt="Facebook" border="0" class="fluid" style="height: auto; font-family: 'Source Sans Pro', sans-serif; font-size: 15px; line-height: 140%; color: #515457;"></a>
-<a href="#"><img src="images/social_home.png" width="41" height="36" alt="Home" border="0" class="fluid" style="height: auto; font-family: 'Source Sans Pro', sans-serif; font-size: 15px; line-height: 140%; color: #515457;"></a> -->
 
                     </span>
                 </td>
@@ -386,7 +393,7 @@
                     <tr>
                         <!-- Column : BEGIN -->
                         <td class="stack-column-center">
-                            <table role="presentation" cellspacing="0" cellpadding="0" border="0">
+                            <table role="presentation" cellspacing="0" cellpadding="0" border="0" class="vdivider">
                                 <tr>
                                     <td dir="ltr" valign="top" style="font-family: 'Source Sans Pro', sans-serif; font-size: 15px; line-height: 140%; color: color: #515457; padding: 10px; text-align: left;" class="center-on-narrow">
                                             <h2 style="margin: 0 0 10px 0; font-family: 'Source Sans Pro', sans-serif; font-size: 22px; line-height: 100%; color: #912235; font-weight: normal;">Headline Goes Here</h2>
