@@ -139,8 +139,12 @@
             border-color: #555555 !important;
         }
         /* What it does: Adds vertical divider on desktop */
-            .vdivider {
-                border-right: 1px solid #f2f2f3;
+        .vdivider {
+            border-right: 1px solid #f2f2f3;
+        }
+
+        .vdivider2 {
+                border-right: 1px solid #5e4b46;
             }
 
         /* Media Queries */
@@ -193,6 +197,16 @@
             .vdivider {
                 border-right: 0px solid #f2f2f3;
             }
+
+            .vdivider2 {
+                border-right: 0px solid #564c49;
+            }
+
+            /* What it does: Hides divider on mobile */
+            .hide-divider {
+                display:none;
+            }
+
         }
 
     </style>
@@ -212,25 +226,22 @@
 <body width="100%" bgcolor="#222222" style="margin: 0; mso-line-height-rule: exactly;">
     <center style="width: 100%; background: #222222; text-align: left;">
 
-        <!-- Visually Hidden Preheader Text : BEGIN -->
-        <div style="display: none; font-size: 1px; line-height: 1px; max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden; mso-hide: all; font-family: 'Source Sans Pro', sans-serif;">
-            News from St. Mark's Episcopal Church
-        </div>
-        <!-- Visually Hidden Preheader Text : END -->
-
         <!-- Email Body : BEGIN -->
         <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" width="600" style="margin: auto;" class="email-container">
 
             <!-- TEST 1 Column Text + Button : BEGIN -->
             <tr>
-                <td bgcolor="#912235" style="padding: 14px 22px 14px; text-align: right; background-color: #912235;">
-                    <span style="margin: 0; font-family: 'Source Sans Pro', sans-serif; font-size: 14px; line-height: 125%; color: #ffffff; font-weight: normal;">
-<a href="https://litmus.com" target="_blank" style="background-color:#ffffff; font-size: 13px; font-family: Helvetica, Arial, sans-serif; color: #912235; text-decoration: none; text-transform: uppercase; border-radius: 4px; padding: 10px 18px; border: 0px none #ffffff; display: inline-block;">Give Now</a>
-<a href="https://litmus.com" target="_blank" style="background-color:#f2f2f3; display: inline-block;"><img src="images/social_fb.png" width="30" height="30" alt="Facebook" border="0" class="fluid" style="height: auto; font-family: 'Source Sans Pro', sans-serif; font-size: 15px; line-height: 140%; color: #515457;"></a>
-
-                    </span>
+                <td bgcolor="#912235" style="padding: 14px 22px 14px; text-align: right; background-color: rgb(145, 34, 53);">
+                    <table role="presentation" align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="text-align: right;">
+                        <tr>
+                            <td dir="ltr" valign="middle" style="font-family: 'Source Sans Pro', sans-serif; font-size: 15px; line-height: 100%; color: #ffffff; padding: 0px; text-align: right;">
+                                <a href="https://litmus.com" target="_blank"><img src="images/btn_give.png" width="96" height="30" alt="Give Now" border="0" style="display: inline-block;"></a>&nbsp;
+                                <a href="https://litmus.com" target="_blank"><img src="images/social_fb.png" width="36" height="31" alt="Facebook" border="0" style="display: inline-block;"></a>&nbsp;
+                                <a href="https://litmus.com" target="_blank"><img src="images/social_home.png" width="36" height="31" alt="Homepage" border="0" style="display: inline-block;"></a>
+                            </td>
+                        </tr>
+                    </table>
                 </td>
-
             </tr>
             <!-- TEST 1 Column Text + Button : END -->
 
@@ -277,7 +288,7 @@
                             <td width="66.66%" class="stack-column-center">
                                 <table role="presentation" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
                                     <tr>
-                                        <td dir="ltr" valign="top" style="font-family: 'Source Sans Pro', sans-serif; font-size: 15px; line-height: 140%; color: #515457; padding: 10px; text-align: left;" class="center-on-narrow">
+                                        <td dir="ltr" valign="top" style="font-family: 'Source Sans Pro', sans-serif; font-size: 15px; line-height: 140%; color: #515457; padding: 10px 10px 0px 10px; text-align: left;" class="center-on-narrow">
                                             <h2 style="margin: 0 0 5px 0; font-family: 'Source Sans Pro', sans-serif; font-size: 22px; line-height: 100%; color: #912235; font-weight: normal;">Headline Goes Here</h2>
                                             <p style="margin: 0 0 5px 0; font-size: 12px; text-transform: uppercase; color: #912235;">Day., Mon. 00, 2018 | 00:00-00:00 p.m. | Location</p>
                                             <p style="margin: 0 0 5px 0; color: #515457;">Maecenas sed ante pellentesque, posuere leo id, eleifend dolor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
@@ -303,7 +314,7 @@
 
             <!-- Divider : START -->
             <tr>
-                <td bgcolor="#ffffff" dir="ltr" align="center" valign="top" width="100%" style="padding: 0px 10px 10px 10px;">
+                <td bgcolor="#ffffff" dir="ltr" align="center" valign="top" width="100%" style="padding: 0px 10px 10px 10px;" class="hide-divider">
                     <table role="presentation" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
                         <tr>
                             <td width="66.66%" class="stack-column-center">
@@ -343,8 +354,8 @@
                                     <tr>
                                         <td dir="ltr" valign="top" style="font-family: 'Source Sans Pro', sans-serif; font-size: 15px; line-height: 140%; color: #515457; padding: 10px; text-align: left;" class="center-on-narrow">
                                             <h2 style="margin: 0 0 10px 0; font-family: 'Source Sans Pro', sans-serif; font-size: 22px; line-height: 100%; color: #912235; font-weight: normal;">Headline Goes Here</h2>
-                                            <p style="margin: 0 0 10px 0; font-size: 12px; text-transform: uppercase; color: #912235;">Day., Mon. 00, 2018 | 00:00-00:00 p.m. | Location</p>
-                                            <p style="margin: 0 0 10px 0; color: #515457;">Maecenas sed ante pellentesque, posuere leo id, eleifend dolor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+                                            <p style="margin: 0 0 10px 0; font-size: 12px; text-transform: uppercase; color: #912235; font-family: 'Source Sans Pro', sans-serif;">Day., Mon. 00, 2018 | 00:00-00:00 p.m. | Location</p>
+                                            <p style="margin: 0 0 10px 0; color: #515457; font-size: 15px; font-family: 'Source Sans Pro', sans-serif;">Maecenas sed ante pellentesque, posuere leo id, eleifend dolor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
                                             <!-- Button : BEGIN -->
                                             <table role="presentation" cellspacing="0" cellpadding="0" border="0" class="center-on-narrow" style="float:left;">
                                                 <tr>
@@ -367,7 +378,7 @@
 
             <!-- Divider : START -->
             <tr>
-                <td bgcolor="#ffffff" dir="ltr" align="center" valign="top" width="100%" style="padding: 0px 10px 10px 10px;">
+                <td bgcolor="#ffffff" dir="ltr" align="center" valign="top" width="100%" style="padding: 0px 10px 20px 10px;" class="hide-divider">
                     <table role="presentation" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
                         <tr>
                             <td width="66.66%" class="stack-column-center">
@@ -397,8 +408,8 @@
                                 <tr>
                                     <td dir="ltr" valign="top" style="font-family: 'Source Sans Pro', sans-serif; font-size: 15px; line-height: 140%; color: color: #515457; padding: 10px; text-align: left;" class="center-on-narrow">
                                             <h2 style="margin: 0 0 10px 0; font-family: 'Source Sans Pro', sans-serif; font-size: 22px; line-height: 100%; color: #912235; font-weight: normal;">Headline Goes Here</h2>
-                                            <p style="margin: 0 0 10px 0; font-size: 12px; text-transform: uppercase; color: #912235;">Day., Mon. 00, 2018 | 00:00-00:00 p.m. | Location</p>
-                                            <p style="margin: 0 0 10px 0; color: #515457;">Maecenas sed ante pellentesque, posuere leo id, eleifend dolor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+                                            <p style="margin: 0 0 10px 0; font-size: 12px; text-transform: uppercase; color: #912235; font-family: 'Source Sans Pro', sans-serif;">Day., Mon. 00, 2018 | 00:00-00:00 p.m. | Location</p>
+                                            <p style="margin: 0 0 10px 0; color: #515457; font-size: 15px; font-family: 'Source Sans Pro', sans-serif;">Maecenas sed ante pellentesque, posuere leo id, eleifend dolor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
                                             <!-- Button : BEGIN -->
                                             <table role="presentation" cellspacing="0" cellpadding="0" border="0" class="center-on-narrow" style="float:left;">
                                                 <tr>
@@ -417,10 +428,10 @@
                         <td class="stack-column-center">
                             <table role="presentation" cellspacing="0" cellpadding="0" border="0">
                                 <tr>
-                                    <td style="font-family: 'Source Sans Pro', sans-serif; font-size: 15px; line-height: 140%; color: #515457; padding: 0 10px 10px; text-align: left;" class="center-on-narrow">
-                                       <h2 style="margin: 0 0 10px 0; font-family: 'Source Sans Pro', sans-serif; font-size: 22px; line-height: 100%; color: #912235; font-weight: normal;">Headline Goes Here</h2>
-                                            <p style="margin: 0 0 10px 0; font-size: 12px; text-transform: uppercase; color: #912235;">Day., Mon. 00, 2018 | 00:00-00:00 p.m. | Location</p>
-                                            <p style="margin: 0 0 10px 0; color: #515457;">Maecenas sed ante pellentesque, posuere leo id, eleifend dolor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+                                    <td dir="ltr" valign="top" style="font-family: 'Source Sans Pro', sans-serif; font-size: 15px; line-height: 140%; color: color: #515457; padding: 10px; text-align: left;" class="center-on-narrow">
+                                            <h2 style="margin: 0 0 10px 0; font-family: 'Source Sans Pro', sans-serif; font-size: 22px; line-height: 100%; color: #912235; font-weight: normal;">Headline Goes Here</h2>
+                                            <p style="margin: 0 0 10px 0; font-size: 12px; text-transform: uppercase; color: #912235; font-family: 'Source Sans Pro', sans-serif;">Day., Mon. 00, 2018 | 00:00-00:00 p.m. | Location</p>
+                                            <p style="margin: 0 0 10px 0; color: #515457; font-size: 15px; font-family: 'Source Sans Pro', sans-serif;">Maecenas sed ante pellentesque, posuere leo id, eleifend dolor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
                                             <!-- Button : BEGIN -->
                                             <table role="presentation" cellspacing="0" cellpadding="0" border="0" class="center-on-narrow" style="float:left;">
                                                 <tr>
@@ -443,41 +454,34 @@
 
         <!-- This Week at St. Mark’s : END -->
 
-            <!-- Divider : BEGIN -->
-            <!--<tr>
-                <td bgcolor="#ffffff" style="padding: 20px 20px 20px; text-align: center; background:#f2f2f3;">
-                    <span style="margin: 0; font-family: 'Source Sans Pro', sans-serif; font-size: 24px; line-height: 125%; color: #333333; font-weight: normal; background:red; width:80%;">Praesent laoreet malesuada&nbsp;cursus.</span>
-                </td>
-            </tr>-->
-            <!-- Divider : END -->
-
-            <!-- Background Image with Text : BEGIN -->
-            <tr>
-                <!-- Bulletproof Background Images c/o https://backgrounds.cm -->
-                <td background="images/red_bg.png" bgcolor="#222222" valign="middle" style="text-align: center; background-position: center center !important; background-size: cover !important;">
-                <!--[if gte mso 9]>
-                <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:600px;height:175px; background-position: center center !important;">
-                <v:fill type="tile" src="bg.png" color="#222222" />
-                <v:textbox inset="0,0,0,0">
-                <![endif]-->
-                <div>
-                    <table role="presentation" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
-                        <tr>
-                            <td valign="middle" style="text-align: center; padding: 40px; font-family: 'Source Sans Pro', sans-serif; font-size: 24px; line-height: 100%; color: #ffffff;">
-                                <p style="margin: 0;">See our calendar for more upcoming events.</p><br>
-                                <!-- Button : BEGIN -->
-                                <table width="100%" border="0" cellspacing="0" cellpadding="0">
-                                  <tr>
-                                    <td>
-                                      <table border="0" cellspacing="0" cellpadding="0">
-                                        <tr>
-                                          <td align="center"><a href="#" target="_blank" style=" font-family: 'Source Sans Pro', sans-serif; font-size: 14px; color: #ffffff; text-decoration: none; text-transform: uppercase; border-radius: 0px; padding: 8px 22px; border: 2px solid #ffffff; display: inline-block;">Find Out More</a></td>
-                                        </tr>
-                                      </table>
-                                    </td>
-                                  </tr>
-                                </table>
-                                <!-- Button : END -->
+        <!-- Calendar Callout : START -->
+        <!-- Background Image with Text : BEGIN -->
+        <tr>
+            <!-- Bulletproof Background Images c/o https://backgrounds.cm -->
+            <td background="images/red_bg.png" bgcolor="#222222" valign="middle" style="text-align: center; background-position: center center !important; background-size: cover !important;">
+            <!--[if gte mso 9]>
+            <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:600px;height:175px; background-position: center center !important;">
+            <v:fill type="tile" src="bg.png" color="#222222" />
+            <v:textbox inset="0,0,0,0">
+            <![endif]-->
+            <div>
+                <table role="presentation" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+                    <tr>
+                        <td valign="middle" style="text-align: center; padding: 40px; font-family: 'Source Sans Pro', sans-serif; font-size: 24px; line-height: 100%; color: #ffffff;">
+                            <p style="margin: 0;">See our calendar for more upcoming events.</p><br>
+                            <!-- Button : BEGIN -->
+                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                              <tr>
+                                <td>
+                                  <table border="0" cellspacing="0" cellpadding="0">
+                                    <tr>
+                                      <td align="center"><a href="#" target="_blank" style=" font-family: 'Source Sans Pro', sans-serif; font-size: 14px; color: #ffffff; text-decoration: none; text-transform: uppercase; border-radius: 0px; padding: 8px 22px; border: 2px solid #ffffff; display: inline-block;">Find Out More</a></td>
+                                    </tr>
+                                  </table>
+                                </td>
+                              </tr>
+                            </table>
+                            <!-- Button : END -->
                             </td>
                         </tr>
                     </table>
@@ -489,23 +493,106 @@
             </td>
         </tr>
         <!-- Background Image with Text : END -->
+        <!-- Calendar Callout : END -->
 
-        <!-- 2 Even Columns : BEGIN -->
+        <!-- General News : START -->
+
+            <!-- H2 : START -->
+            <tr>
+                <td bgcolor="#ffffff" dir="ltr" align="center" valign="top" width="100%" style="padding: 10px 10px 0px 10px;">
+                    <table role="presentation" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+                        <tr>
+
+                            <!-- Column : BEGIN -->
+                            <td width="66.66%" class="stack-column-center">
+                                <table role="presentation" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                    <tr>
+                                        <td dir="ltr" valign="top" style="font-family: 'Source Sans Pro', sans-serif; font-size: 36px; line-height: 100%; color: #912235; padding: 10px 0px 0px 10px; text-align: left;" class="center-on-narrow">
+                                            <h2 style="margin: 0px; font-family: 'Source Sans Pro', sans-serif; font-size: 36px; line-height: 100%; color: #912235; font-weight: normal;">General News</h2>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <!-- Column : END -->
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <!-- H2 : END -->
+
+            <!-- No Thumbnail, Text Right : BEGIN -->
+            <tr>
+                <td bgcolor="#ffffff" dir="ltr" align="center" valign="top" width="100%" style="padding: 10px;">
+                    <table role="presentation" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+                        <tr>
+
+                            <!-- Column : BEGIN -->
+                            <td width="66.66%" class="stack-column-center">
+                                <table role="presentation" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                    <tr>
+                                        <td dir="ltr" valign="top" style="font-family: 'Source Sans Pro', sans-serif; font-size: 15px; line-height: 140%; color: #515457; padding: 10px; text-align: left;" class="center-on-narrow">
+                                            <h2 style="margin: 0 0 5px 0; font-family: 'Source Sans Pro', sans-serif; font-size: 20px; line-height: 100%; color: #912235; font-weight: normal;">Headline Goes Here</h2>
+                                            <p style="margin: 0 0 5px 0; color: #515457; font-size: 13px; font-family: 'Source Sans Pro', sans-serif;">Maecenas sed ante pellentesque, posuere leo id, eleifend dolor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+                                            <!-- Button : BEGIN -->
+                                            <table role="presentation" cellspacing="0" cellpadding="0" border="0" class="center-on-narrow" style="float:left;">
+                                                <tr>
+                                                  <td dir="ltr" valign="top" style="font-family: 'Source Sans Pro', sans-serif; font-size: 15px; line-height: 140%; color: #781c2b; text-align: left;" class="center-on-narrow">
+                                            <a href="" style="font-family: 'Source Sans Pro', sans-serif; font-size: 15px; line-height: 100%; color: #781c2b; font-weight: bold; text-decoration: none;">Learn More</a><span style="font-family: 'Source Sans Pro', sans-serif; font-size: 15px; line-height: 100%; color: #781c2b; font-weight: bold; text-decoration: none;">&nbsp;&rarr;</span>
+                                                  </td>  
+                                              </tr>
+                                          </table>
+                                          <!-- Button : END -->
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <!-- Column : END -->
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <!-- No Thumbnail, Text Right : END -->
+
+            <!-- Divider : START -->
+            <tr>
+                <td bgcolor="#ffffff" dir="ltr" align="center" valign="top" width="100%" style="padding: 0px 10px 20px 10px;" class="hide-divider">
+                    <table role="presentation" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+                        <tr>
+                            <td width="66.66%" class="stack-column-center">
+                                <table role="presentation" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                    <tr>
+                                        <td dir="ltr" valign="top" style="font-family: 'Source Sans Pro', sans-serif; font-size: 15px; line-height: 100%; color: #912235; padding: 0px 10px 0px 10px; text-align: left;" class="center-on-narrow">
+                                            <div style="background-color:#cccccc; border-bottom: 1px solid #f2f2f3;"></div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr> 
+                    </table>
+                </td>
+            </tr>
+            <!-- Divider : END -->
+
         <tr>
-            <td bgcolor="#ffffff" align="center" valign="top" style="padding: 10px;">
+            <td bgcolor="#ffffff" align="center" valign="top" style="padding: 0px 10px 10px 10px;">
                 <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
                     <tr>
                         <!-- Column : BEGIN -->
                         <td class="stack-column-center">
-                            <table role="presentation" cellspacing="0" cellpadding="0" border="0">
+                            <table role="presentation" cellspacing="0" cellpadding="0" border="0" class="vdivider">
                                 <tr>
-                                    <td style="padding: 10px; text-align: center">
-                                        <img src="http://placehold.it/270" width="270" height="270" alt="alt_text" border="0" class="fluid" style="height: auto; background: #dddddd; font-family: 'Source Sans Pro', sans-serif; font-size: 15px; line-height: 140%; color: #515457;">
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td style="font-family: 'Source Sans Pro', sans-serif; font-size: 15px; line-height: 140%; color: #515457; padding: 0 10px 10px; text-align: left;" class="center-on-narrow">
-                                        <p style="margin: 0;">Maecenas sed ante pellentesque, posuere leo id, eleifend dolor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+                                    <td dir="ltr" valign="top" style="font-family: 'Source Sans Pro', sans-serif; font-size: 13px; line-height: 140%; color: color: #515457; padding: 0px 10px 10px 10px; text-align: left;" class="center-on-narrow">
+                                            <h3 style="margin: 0 0 10px 0; font-family: 'Source Sans Pro', sans-serif; font-size: 20px; line-height: 100%; color: #912235; font-weight: normal;">Headline Goes Here</h3>
+                                            <p style="margin: 0 0 10px 0; color: #515457; font-size: 13px; font-family: 'Source Sans Pro', sans-serif;">Maecenas sed ante pellentesque, posuere leo id, eleifend dolor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+                                            <!-- Button : BEGIN -->
+                                            <table role="presentation" cellspacing="0" cellpadding="0" border="0" class="center-on-narrow" style="float:left;">
+                                                <tr>
+                                                  <td dir="ltr" valign="top" style="font-family: 'Source Sans Pro', sans-serif; font-size: 15px; line-height: 140%; color: #781c2b; text-align: left;" class="center-on-narrow">
+                                            <a href="" style="font-family: 'Source Sans Pro', sans-serif; font-size: 15px; line-height: 100%; color: #781c2b; font-weight: bold; text-decoration: none;">Learn More</a><span style="font-family: 'Source Sans Pro', sans-serif; font-size: 15px; line-height: 100%; color: #781c2b; font-weight: bold; text-decoration: none;">&nbsp;&rarr;</span>
+                                                  </td>  
+                                              </tr>
+                                          </table>
+                                          <!-- Button : END -->
                                     </td>
                                 </tr>
                             </table>
@@ -515,13 +602,18 @@
                         <td class="stack-column-center">
                             <table role="presentation" cellspacing="0" cellpadding="0" border="0">
                                 <tr>
-                                    <td style="padding: 10px; text-align: center">
-                                        <img src="http://placehold.it/270" width="270" height="270" alt="alt_text" border="0" class="fluid" style="height: auto; background: #dddddd; font-family: 'Source Sans Pro', sans-serif; font-size: 15px; line-height: 140%; color: #515457;">
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td style="font-family: 'Source Sans Pro', sans-serif; font-size: 15px; line-height: 140%; color: #515457; padding: 0 10px 10px; text-align: left;" class="center-on-narrow">
-                                        <p style="margin: 0;">Maecenas sed ante pellentesque, posuere leo id, eleifend dolor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+                                    <td dir="ltr" valign="top" style="font-family: 'Source Sans Pro', sans-serif; font-size: 13px; line-height: 140%; color: color: #515457; padding: 0px 10px 10px 10px; text-align: left;" class="center-on-narrow">
+                                            <h3 style="margin: 0 0 10px 0; font-family: 'Source Sans Pro', sans-serif; font-size: 20px; line-height: 100%; color: #912235; font-weight: normal;">Headline Goes Here</h3>
+                                            <p style="margin: 0 0 10px 0; color: #515457; font-size: 13px; font-family: 'Source Sans Pro', sans-serif;">Maecenas sed ante pellentesque, posuere leo id, eleifend dolor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+                                            <!-- Button : BEGIN -->
+                                            <table role="presentation" cellspacing="0" cellpadding="0" border="0" class="center-on-narrow" style="float:left;">
+                                                <tr>
+                                                  <td dir="ltr" valign="top" style="font-family: 'Source Sans Pro', sans-serif; font-size: 15px; line-height: 140%; color: #781c2b; text-align: left;" class="center-on-narrow">
+                                            <a href="" style="font-family: 'Source Sans Pro', sans-serif; font-size: 15px; line-height: 100%; color: #781c2b; font-weight: bold; text-decoration: none;">Learn More</a><span style="font-family: 'Source Sans Pro', sans-serif; font-size: 15px; line-height: 100%; color: #781c2b; font-weight: bold; text-decoration: none;">&nbsp;&rarr;</span>
+                                                  </td>  
+                                              </tr>
+                                          </table>
+                                          <!-- Button : END -->
                                     </td>
                                 </tr>
                             </table>
@@ -533,9 +625,14 @@
         </tr>
         <!-- 2 Even Columns : END -->
 
+        <!-- General News : END -->
+
+
+
+        <!-- Footer Buttons : START -->
         <!-- 3 Even Columns : BEGIN -->
         <tr>
-            <td bgcolor="#ffffff" align="center" valign="top" style="padding: 10px;">
+            <td bgcolor="#5e4b46" align="center" valign="top" style="background-color: #5e4b46; padding: 10px;">
                 <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
                     <tr>
                         <!-- Column : BEGIN -->
@@ -543,132 +640,63 @@
                             <table role="presentation" cellspacing="0" cellpadding="0" border="0">
                                 <tr>
                                     <td style="padding: 10px; text-align: center">
-                                        <img src="http://placehold.it/170" width="170" height="170" alt="alt_text" border="0" class="fluid" style="height: auto; background: #dddddd; font-family: 'Source Sans Pro', sans-serif; font-size: 15px; line-height: 140%; color: #515457;">
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td style="font-family: 'Source Sans Pro', sans-serif; font-size: 15px; line-height: 140%; color: #515457; padding: 0 10px 10px; text-align: left;" class="center-on-narrow">
-                                        <p style="margin: 0;">Maecenas sed ante pellentesque, posuere leo id, eleifend dolor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
-                                    </td>
-                                </tr>
-                            </table>
-                        </td>
-                        <!-- Column : END -->
-                        <!-- Column : BEGIN -->
-                        <td width="33.33%" class="stack-column-center">
-                            <table role="presentation" cellspacing="0" cellpadding="0" border="0">
-                                <tr>
-                                    <td style="padding: 10px; text-align: center">
-                                        <img src="http://placehold.it/170" width="170" height="170" alt="alt_text" border="0" class="fluid" style="height: auto; background: #dddddd; font-family: 'Source Sans Pro', sans-serif; font-size: 15px; line-height: 140%; color: #515457;">
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td style="font-family: 'Source Sans Pro', sans-serif; font-size: 15px; line-height: 140%; color: #515457; padding: 0 10px 10px; text-align: left;" class="center-on-narrow">
-                                        <p style="margin: 0;">Maecenas sed ante pellentesque, posuere leo id, eleifend dolor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
-                                    </td>
-                                </tr>
-                            </table>
-                        </td>
-                        <!-- Column : END -->
-                        <!-- Column : BEGIN -->
-                        <td width="33.33%" class="stack-column-center">
-                            <table role="presentation" cellspacing="0" cellpadding="0" border="0">
-                                <tr>
-                                    <td style="padding: 10px; text-align: center">
-                                        <img src="http://placehold.it/170" width="170" height="170" alt="alt_text" border="0" class="fluid" style="height: auto; background: #dddddd; font-family: 'Source Sans Pro', sans-serif; font-size: 15px; line-height: 140%; color: #515457;">
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td style="font-family: 'Source Sans Pro', sans-serif; font-size: 15px; line-height: 140%; color: #515457; padding: 0 10px 10px; text-align: left;" class="center-on-narrow">
-                                        <p style="margin: 0;">Maecenas sed ante pellentesque, posuere leo id, eleifend dolor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
-                                    </td>
-                                </tr>
-                            </table>
-                        </td>
-                        <!-- Column : END -->
-                    </tr>
-                </table>
-            </td>
-        </tr>
-        <!-- 3 Even Columns : END -->
-
-        <!-- Thumbnail Left, Text Right : BEGIN -->
-        <tr>
-            <td bgcolor="#ffffff" dir="ltr" align="center" valign="top" width="100%" style="padding: 10px;">
-                <table role="presentation" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
-                    <tr>
-                        <!-- Column : BEGIN -->
-                        <td width="33.33%" class="stack-column-center">
-                            <table role="presentation" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
-                                <tr>
-                                    <td dir="ltr" valign="top" style="padding: 0 10px;">
-                                        <img src="http://placehold.it/170" width="170" height="170" alt="alt_text" border="0" class="center-on-narrow" style="height: auto; background: #dddddd; font-family: 'Source Sans Pro', sans-serif; font-size: 15px; line-height: 140%; color: #515457;">
-                                    </td>
-                                </tr>
-                            </table>
-                        </td>
-                        <!-- Column : END -->
-                        <!-- Column : BEGIN -->
-                        <td width="66.66%" class="stack-column-center">
-                            <table role="presentation" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
-                                <tr>
-                                    <td dir="ltr" valign="top" style="font-family: 'Source Sans Pro', sans-serif; font-size: 15px; line-height: 140%; color: #515457; padding: 10px; text-align: left;" class="center-on-narrow">
-                                        <h2 style="margin: 0 0 10px 0; font-family: 'Source Sans Pro', sans-serif; font-size: 18px; line-height: 125%; color: #333333; font-weight: bold;">Class aptent taciti sociosqu</h2>
-                                        <p style="margin: 0 0 10px 0;">Maecenas sed ante pellentesque, posuere leo id, eleifend dolor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
                                         <!-- Button : BEGIN -->
-                                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" class="center-on-narrow" style="float:left;">
-                                            <tr>
-                                                <td style="border-radius: 3px; background: #222222; text-align: center;" class="button-td">
-                                                    <a href="http://www.google.com" style="background: #222222; border: 15px solid #222222; font-family: 'Source Sans Pro', sans-serif; font-size: 13px; line-height: 110%; text-align: center; text-decoration: none; display: block; border-radius: 3px; font-weight: bold;" class="button-a">
-                                                      <span style="color:#ffffff;" class="button-link">&nbsp;&nbsp;&nbsp;&nbsp;A Button&nbsp;&nbsp;&nbsp;&nbsp;</span>
-                                                  </a>
-                                              </td>
+                                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                          <tr>
+                                            <td>
+                                              <table border="0" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                  <td align="center"><a href="#" target="_blank" style=" font-family: 'Source Sans Pro', sans-serif; font-size: 14px; color: #ffffff; text-decoration: none; text-transform: uppercase; border-radius: 0px; padding: 8px 23px; border: 2px solid #ffffff; display: inline-block;">Worship Schedule</a></td>
+                                                </tr>
+                                              </table>
+                                            </td>
                                           </tr>
-                                      </table>
-                                      <!-- Button : END -->
+                                        </table>
+                                        <!-- Button : END -->
                                     </td>
                                 </tr>
                             </table>
                         </td>
                         <!-- Column : END -->
-                    </tr>
-                </table>
-            </td>
-        </tr>
-        <!-- Thumbnail Left, Text Right : END -->
-
-        <!-- Thumbnail Right, Text Left : BEGIN -->
-        <tr>
-            <td bgcolor="#ffffff" dir="rtl" align="center" valign="top" width="100%" style="padding: 10px;">
-                <table role="presentation" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
-                    <tr>
                         <!-- Column : BEGIN -->
                         <td width="33.33%" class="stack-column-center">
-                            <table role="presentation" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+                            <table role="presentation" cellspacing="0" cellpadding="0" border="0">
                                 <tr>
-                                    <td dir="ltr" valign="top" style="padding: 0 10px;">
-                                        <img src="http://placehold.it/170" width="170" height="170" alt="alt_text" border="0" class="center-on-narrow" style="height: auto; background: #dddddd; font-family: 'Source Sans Pro', sans-serif; font-size: 15px; line-height: 140%; color: #515457;">
+                                    <td style="padding: 10px; text-align: center">
+                                        <!-- Button : BEGIN -->
+                                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                          <tr>
+                                            <td>
+                                              <table border="0" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                  <td align="center"><a href="#" target="_blank" style=" font-family: 'Source Sans Pro', sans-serif; font-size: 14px; color: #ffffff; text-decoration: none; text-transform: uppercase; border-radius: 0px; padding: 8px 40px; border: 2px solid #ffffff; display: inline-block;">Office Hours</a></td>
+                                                </tr>
+                                              </table>
+                                            </td>
+                                          </tr>
+                                        </table>
+                                        <!-- Button : END -->
                                     </td>
                                 </tr>
                             </table>
                         </td>
                         <!-- Column : END -->
                         <!-- Column : BEGIN -->
-                        <td width="66.66%" class="stack-column-center">
-                            <table role="presentation" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+                        <td width="33.33%" class="stack-column-center">
+                            <table role="presentation" cellspacing="0" cellpadding="0" border="0">
                                 <tr>
-                                    <td dir="ltr" valign="top" style="font-family: 'Source Sans Pro', sans-serif; font-size: 15px; line-height: 140%; color: #515457; padding: 10px; text-align: left;" class="center-on-narrow">
-                                        <h2 style="margin: 0 0 10px 0; font-family: 'Source Sans Pro', sans-serif; font-size: 18px; line-height: 125%; color: #333333; font-weight: bold;">Class aptent taciti sociosqu</h2>
-                                        <p style="margin: 0 0 10px 0;">Maecenas sed ante pellentesque, posuere leo id, eleifend dolor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+                                    <td style="padding: 10px; text-align: center">
                                         <!-- Button : BEGIN -->
-                                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" class="center-on-narrow" style="float:left;">
-                                            <tr>
-                                                <td style="border-radius: 3px; background: #222222; text-align: center;" class="button-td">
-                                                    <a href="http://www.google.com" style="background: #222222; border: 15px solid #222222; font-family: 'Source Sans Pro', sans-serif; font-size: 13px; line-height: 110%; text-align: center; text-decoration: none; display: block; border-radius: 3px; font-weight: bold;" class="button-a">
-                                                        <span style="color:#ffffff;" class="button-link">&nbsp;&nbsp;&nbsp;&nbsp;A Button&nbsp;&nbsp;&nbsp;&nbsp;</span>
-                                                    </a>
-                                                </td>
-                                            </tr>
+                                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                          <tr>
+                                            <td>
+                                              <table border="0" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                  <td align="center"><a href="#" target="_blank" style=" font-family: 'Source Sans Pro', sans-serif; font-size: 14px; color: #ffffff; text-decoration: none; text-transform: uppercase; border-radius: 0px; padding: 8px 37px; border: 2px solid #ffffff; display: inline-block;">Hear Sermons</a></td>
+                                                </tr>
+                                              </table>
+                                            </td>
+                                          </tr>
                                         </table>
                                         <!-- Button : END -->
                                     </td>
@@ -680,7 +708,53 @@
                 </table>
             </td>
         </tr>
+        <!-- 3 Even Columns : END -->
+        <!-- Footer Buttons : END -->
+
+        <!-- Footer Proper : START -->
+        <!-- Thumbnail Right, Text Left : BEGIN -->
+        <tr>
+            <td bgcolor="#453733" dir="rtl" align="center" valign="top" width="100%" style="padding: 10px; background-color: #453733;">
+                <table role="presentation" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+                    <tr>
+                        <!-- Column : BEGIN -->
+                        <td width="33.33%" class="stack-column-center">
+                            <table role="presentation" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                <tr>
+                                    <td dir="ltr" valign="top" style="font-family: 'Source Sans Pro', sans-serif; font-size: 15px; line-height: 160%; color: #d3d1d0; padding: 0 10px;">
+                                        <p style="margin: 0 0 10px 0; color: #d3d1d0; font-family: 'Source Sans Pro', sans-serif; font-size: 13px; text-transform: uppercase;">
+                                            St. Mark's Episcopal Church<br>
+                                            4129 Oxford Ave.<br>
+                                            Jacksonville, FL 32210<br>
+                                            <a href="tel:904-388-2681" style="color: #ffffff; font-style: normal; font-weight: bold; text-decoration: none;">904-388-2681</a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <!-- Column : END -->
+                        <!-- Column : BEGIN -->
+                        <td width="66.66%" class="stack-column-center">
+                            <table role="presentation" align="center" border="0" cellpadding="0" cellspacing="0" width="100%" class="vdivider2">
+                                <tr>
+                                    <td dir="ltr" valign="top" style="font-family: 'Source Sans Pro', sans-serif; font-size: 15px; line-height: 160%; color: #d3d1d0; padding: 10px; text-align: left;" class="center-on-narrow">
+                                        <p style="margin: 0 0 10px 0; color: #d3d1d0; font-family: 'Source Sans Pro', sans-serif; font-size: 12px; font-style: italic;">
+                                            <a href="mailto:TMurray@stmarksjacksonville.org" style="color: #ffffff; font-style: normal; font-weight: bold; text-decoration: none;">The Rev. Thomas P. Murray</a>, Rector<br>
+                                            <a href="mailto:NSuellau@stmarksjacksonville.org" style="color: #ffffff; font-style: normal; font-weight: bold; text-decoration: none;">The Rev. Canon Nancy Suellau</a>, Associate Rector<br>
+                                            <a href="mailto:skidd@stmarksjacksonville.org" style="color: #ffffff; font-style: normal; font-weight: bold; text-decoration: none;">The Rev. Saundra Kidd</a>, Deacon<br>
+                                            <a href="mailto:saintbyrd@aol.com" style="color: #ffffff; font-style: normal; font-weight: bold; text-decoration: none;">The Rev. Lila Byrd Brown</a>, Assisting Priest<br>
+                                            <a href="mailto:ddupree@diocesefl.org" style="color: #ffffff; font-style: normal; font-weight: bold; text-decoration: none;">The Rev. Canon Dr. Douglas Dupree</a>, Theologian in Residence<br>
+                                            <span style="color: #ffffff; font-style: normal; font-weight: normal; text-decoration: none;">The Rev. Barnum McCarty</span>, Rector Emeritus</p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <!-- Column : END -->
+                    </tr>
+                </table>
+            </td>
+        </tr>
         <!-- Thumbnail Right, Text Left : END -->
+        <!-- Footer Proper : END -->
 
         <!-- Clear Spacer : BEGIN -->
         <tr>
